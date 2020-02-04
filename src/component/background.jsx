@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import ReactTypingEffect from 'react-typing-effect';
 import WOW from "wowjs";
+
+import logo from './../img/z.png';
 
 export default class Background extends React.Component {
 	componentDidMount() {
@@ -15,11 +17,27 @@ export default class Background extends React.Component {
 				<div id="stars2" />
 				<div id="stars3" />
 				<div className="top-container flex">
+					<img
+						className={"img-fluid " + this.props.fadeIn + this.props.bounceIn}
+						src={logo}
+						alt=""
+						style={{
+							borderRadius: 50 + "%",
+							height: 250 + "px",
+							width: 250 + "px"
+						}}
+					/>
 					<h1>
 						Hey!, I&apos;m Zaid Omar.
-						<br />
-						I&apos;m a Full Stack Developer.
 					</h1>
+					<ReactTypingEffect
+						className="typewriter"
+						staticText="I'm a"
+						text={["Developer.","Software Developer.","Full Stack Developer."]}
+						speed='100'
+						typingDelay='500'
+						eraseDelay='1000'
+					/>
 					{/* offset can be cahnged in node modules wowjs default file */}
 					<button
 						className={"work-button " + this.props.bounceIn}

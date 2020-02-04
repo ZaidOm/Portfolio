@@ -59,9 +59,9 @@ export default class About extends React.Component {
 							}}
 						/>
 						<p className={"mytext pt-3 " + this.props.fadeIn}>
-							I love to transform ideas into reality using code. I
-							am passionate about using Javascript and animations
-							to create awesome user experiences.
+							I have a passion of turning concepts into reality using code. I
+							primarily use Javascript and Libraries/Frameworks such as ReactJS & VueJS
+							to create sweet User Interfaces & a great User Experience.
 						</p>
 					</div>
 					<div
@@ -96,7 +96,7 @@ export default class About extends React.Component {
 								style={{ width: 90 + "%" }}
 								aria-valuemin="0"
 								aria-valuemax="100">
-								Javascript
+								React Native
 							</div>
 						</div>
 						<div className="progress mb-3">
@@ -106,14 +106,14 @@ export default class About extends React.Component {
 								style={{ width: 60 + "%" }}
 								aria-valuemin="0"
 								aria-valuemax="100">
-								PHP
+								C#
 							</div>
 						</div>
 						<div className="progress mb-3">
 							<div
-								className="progress-bar fill-80-bar"
+								className="progress-bar fill-90-bar"
 								role="progressbar"
-								style={{ width: 80 + "%" }}
+								style={{ width: 90 + "%" }}
 								aria-valuemin="0"
 								aria-valuemax="100">
 								ReactJS
@@ -156,7 +156,7 @@ export default class About extends React.Component {
 								style={{ width: 60 + "%" }}
 								aria-valuemin="0"
 								aria-valuemax="100">
-								JQuery
+								Express.JS
 							</div>
 						</div>
 					</div>

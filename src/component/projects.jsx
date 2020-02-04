@@ -1,7 +1,9 @@
 import React from "react";
-import Vmarine from "../img/Vmarine.jpg";
-import aguaDeLuz from "../img/aguaDeLuz.png";
-import todo from "../img/todolist.png";
+import terralogo from "../img/terralogo.png";
+import terrabush from "../img/terrabush.png";
+import spokelogo from "../img/spoke.png";
+import logo from "../img/daybooklogo.png"
+
 import PropTypes from "prop-types";
 
 export default class Projects extends React.Component {
@@ -19,26 +21,26 @@ export default class Projects extends React.Component {
 						<div className="row my-5">
 							<div
 								className={
-									"testbg col-12 col-sm-12 col-md-4 " +
+									"daybookbg col-12 col-sm-12 col-md-4 " +
 									this.props.fadeIn
 								}>
 								<div className="overlay">
 									<div className="text">
-										<h2>VMarine</h2>
+										<h2>DayBook</h2>
 									</div>
 									<div>
 										<button
-											id="vmarine-button"
+											id="daybook-button"
 											className="project-button"
 											onClick={() => {
 												var modalBG = document.getElementById(
 													"gallery-card"
 												);
-												var marineModal = document.getElementById(
-													"vmarine"
+												var daybookModal = document.getElementById(
+													"daybook"
 												);
 												modalBG.style.display = "block";
-												marineModal.style.display =
+												daybookModal.style.display =
 													"block";
 											}}>
 											Learn More
@@ -48,26 +50,37 @@ export default class Projects extends React.Component {
 							</div>
 							<div
 								className={
-									"aguabg col-12 col-sm-12 col-md-4 " +
+									"terrabg col-12 col-sm-12 col-md-4 " +
 									this.props.fadeIn
 								}>
+								<img src={terrabush}
+								style={{
+									textAlign: 'center',
+									display: 'block',
+									justifyContent: 'center',
+									alignItems: 'center',
+									margin: 'auto',
+									marginTop: 100,
+									width: 125,
+									height:100}}/>
+
 								<div className="overlay">
 									<div className="text">
-										<h2>Aguas De Luz</h2>
+										<h2>T.E.R.R.A</h2>
 									</div>
 									<div>
 										<button
-											id="agua-button"
+											id="terra-button"
 											className="project-button"
 											onClick={() => {
 												var modalBG = document.getElementById(
 													"gallery-card"
 												);
-												var aguaModal = document.getElementById(
-													"agualuz"
+												var terraModal = document.getElementById(
+													"terraluz"
 												);
 												modalBG.style.display = "block";
-												aguaModal.style.display =
+												terraModal.style.display =
 													"block";
 											}}>
 											Learn More
@@ -77,26 +90,36 @@ export default class Projects extends React.Component {
 							</div>
 							<div
 								className={
-									"todobg col-12 col-sm-12 col-md-4 " +
+									"spokebg col-12 col-sm-12 col-md-4 " +
 									this.props.fadeIn
 								}>
+								<img src={spokelogo}
+								style={{
+									textAlign: 'center',
+									display: 'block',
+									justifyContent: 'center',
+									alignItems: 'center',
+									margin: 'auto',
+									marginTop: 50,
+									width: 200,
+									height:200}}/>
 								<div className="overlay">
 									<div className="text">
-										<h2>To Do List</h2>
+										<h2>Spoke Mobile</h2>
 									</div>
 									<div>
 										<button
-											id="todo-button"
+											id="spoke-button"
 											className="project-button"
 											onClick={() => {
 												var modalBG = document.getElementById(
 													"gallery-card"
 												);
-												var todoModal = document.getElementById(
-													"todolist"
+												var spokeModal = document.getElementById(
+													"spokelist"
 												);
 												modalBG.style.display = "block";
-												todoModal.style.display =
+												spokeModal.style.display =
 													"block";
 											}}>
 											Learn More
@@ -110,77 +133,33 @@ export default class Projects extends React.Component {
 
 				{/*hidden modals*/}
 				<div id="gallery-card">
-					<div id="vmarine" className="modal-card">
+					<div id="daybook" className="modal-card">
 						<div className="visual">
-							<img src={Vmarine} alt=""/>
+							<img 
+							src={logo}
+							alt=""/>
 						</div>
 						<div className="modal-info">
-							<h2>Vmarine</h2>
+							<h2>Daybook - Coming Soon!</h2>
 							<div className="modal-description">
 								<ul>
 									<li>
-										Prototype marine web-application to
-										provide information about progress of
-										services and prices.
+										Prototype team management web application developed
+										using the MERN Stack.
 									</li>
 									<li>
-										Designed with HTML5, CSS3, Bootstrap,
-										Webpack, Wordpress, and ReactJS.
-									</li>
-								</ul>
-							</div>
-							<div className="modal-bottom">
-								<h4>Comming Soon!</h4>
-								<p
-									className="close-icon"
-									style={{
-										textAlign: "right",
-										fontWeight: 900,
-										fontSize: 2 + "rem",
-										cursor: "pointer"
-									}}
-									onClick={() => {
-										var modalBG = document.getElementById(
-											"gallery-card"
-										);
-										var marineModal = document.getElementById(
-											"vmarine"
-										);
-										modalBG.style.display = "none";
-										marineModal.style.display = "none";
-									}}>
-									&#10005;
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div id="agualuz" className="modal-card">
-						<div className="visual">
-							<img src={aguaDeLuz} alt=""/>
-						</div>
-						<div className="modal-info">
-							<h2>Agua De Luz</h2>
-							<div className="modal-description">
-								<ul>
-									<li>
-										Prototype website to promote health
-										natural-made products to increase brand
-										and online presence.
-									</li>
-									<li>
-										Developed with HTML5, CSS3, Bootstrap,
-										Webpack, Parallax Effect,
-										SmoothScrolling(UI), and VanillaJS.
+										Designed to keep track of everyday work, workflows,
+										projects, initiatives and tasks
 									</li>
 								</ul>
 							</div>
 							<div className="modal-bottom">
 								<a
-									href="./AguaDeLuz/index.html"
+									href="https://github.com/ZaidOm/mern"
 									target="_blank">
-									<h3>View live demo</h3>
+									<h3>View Source Code</h3>
 								</a>
+								<br />
 								<p
 									className="close-icon"
 									style={{
@@ -193,11 +172,11 @@ export default class Projects extends React.Component {
 										var modalBG = document.getElementById(
 											"gallery-card"
 										);
-										var aguaModal = document.getElementById(
-											"agualuz"
+										var daybookModal = document.getElementById(
+											"daybook"
 										);
 										modalBG.style.display = "none";
-										aguaModal.style.display = "none";
+										daybookModal.style.display = "none";
 									}}>
 									&#10005;
 								</p>
@@ -205,26 +184,36 @@ export default class Projects extends React.Component {
 						</div>
 					</div>
 
-					<div id="todolist" className="modal-card">
+					<div id="terraluz" className="modal-card">
 						<div className="visual">
-							<img src={todo} alt=""/>
+							<img src={terralogo} alt=""/>
 						</div>
 						<div className="modal-info">
-							<h2>To-Do List</h2>
+							<h2>T.E.R.R.A</h2>
 							<div className="modal-description">
 								<ul>
 									<li>
-										A to-do list to keep track of goals.
+										TERRA is an application that allows the user to keep track of their fields while looking at specific details 
+										pertaining to each field. The system gives the ability to track field details such as:
+										yield, seeds planted, fertilizer use, pesticide use, and other details that may come to 
+										light as progress is made. 
 									</li>
 									<li>
-										Developed with HTML5, CSS3, Bootstrap,
-										Webpack, and ReactJS.
+										TERRA has the ability to visualize Nasa’s Earth Data overtop 
+										of the users fields to give them information about the quality of their field overtime. 
+										It is a solution, to give the user potential solutions to help improve their field quality based on the 
+										information gathered and given by the user.
+									</li>
+									<li>
+										Developed in ReactJS, .NET Core, PosegreSQL, Unity & C#
 									</li>
 								</ul>
 							</div>
 							<div className="modal-bottom">
-								<a href="./todoList/index.html" target="_blank">
-									<h3>View live demo</h3>
+								<a
+									href="https://github.com/ZaidOm/Capstone-TERRA"
+									target="_blank">
+									<h3>View Source Code</h3>
 								</a>
 								<p
 									className="close-icon"
@@ -238,11 +227,65 @@ export default class Projects extends React.Component {
 										var modalBG = document.getElementById(
 											"gallery-card"
 										);
-										var todoModal = document.getElementById(
-											"todolist"
+										var terraModal = document.getElementById(
+											"terraluz"
 										);
 										modalBG.style.display = "none";
-										todoModal.style.display = "none";
+										terraModal.style.display = "none";
+									}}>
+									&#10005;
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="spokelist" className="modal-card">
+						<div className="visual">
+							<img src={spokelogo} 
+							style={{
+								textAlign: 'center',
+								display: 'block',
+								justifyContent: 'center',
+								alignItems: 'center',
+								margin: 'auto',
+								marginTop: 50,
+								width: 200,
+								height:200}}/>
+						</div>
+						<div className="modal-info">
+							<h2>Spoke Mobile</h2>
+							<div className="modal-description">
+								<ul>
+									<li>
+										Real-time news coverage and digital storytelling from the students of Conestoga College’s Journalism program.
+									</li>
+									<li>
+										Developed with React Native. Currently on the App Store
+										& Google Play Store
+									</li>
+								</ul>
+							</div>
+							<div className="modal-bottom">
+								<a href="https://play.google.com/store/apps/details?id=ca.on.conestogac.spoke" target="_blank">
+									<h3>View App</h3>
+								</a>
+								<p
+									className="close-icon"
+									style={{
+										textAlign: "right",
+										fontWeight: 900,
+										fontSize: 2 + "rem",
+										cursor: "pointer"
+									}}
+									onClick={() => {
+										var modalBG = document.getElementById(
+											"gallery-card"
+										);
+										var spokeModal = document.getElementById(
+											"spokelist"
+										);
+										modalBG.style.display = "none";
+										spokeModal.style.display = "none";
 									}}>
 									&#10005;
 								</p>

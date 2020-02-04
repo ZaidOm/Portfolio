@@ -1,7 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import axios from 'axios';
 
 export default class Contact extends React.Component {
+	constructor(props) {
+		super(props);
+	}	
+
 	render() {
 		return (
 			<div id="my-contact" className="container text-center my-5">
@@ -10,7 +15,7 @@ export default class Contact extends React.Component {
 				</h1>
 				<form
 					className={this.props.shake}
-					action="https://formspree.io/example@email.com"
+					action="https://formspree.io/xbjooaqq"
 					method="POST">
 					<div className="form-group">
 						<div className="row">
@@ -55,6 +60,7 @@ export default class Contact extends React.Component {
 						<div className="col-12 col-sm-12 col-md-6 mx-auto">
 							<button
 								type="submit"
+								value="Send"
 								className="btn btn-primary mb-2 hidden">
 								Submit
 							</button>
